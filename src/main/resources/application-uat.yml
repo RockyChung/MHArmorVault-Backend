@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: MHArmorVault-Backend
+  datasource:
+    url: jdbc:postgresql://ep-weathered-field-a1f68e9a.ap-southeast-1.aws.neon.tech:5432/MHDB
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+gemini:
+  api:
+    key: ${GEMINI_API_KEY:}
