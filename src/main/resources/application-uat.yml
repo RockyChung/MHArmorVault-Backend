@@ -7,7 +7,12 @@ spring:
     password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
   jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update # 關鍵設定
+    show-sql: true     # 建議開啟，這樣你能在 Console 看到它執行了 CREATE TABLE
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
 gemini:
   api:
     key: ${GEMINI_API_KEY:}
